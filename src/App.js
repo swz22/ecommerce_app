@@ -1,13 +1,11 @@
-import './App.css';
-import Products from './components/Products.js'
+import React from "react"
+import Home from './components/Home.js'
 
 function App() {
   return (
+    
     <div className="App">
-        <p>
-          Hello World
-        </p>
-        <Products/>
+        <Home/>
     </div>
   );
 }
