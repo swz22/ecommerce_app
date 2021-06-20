@@ -1,17 +1,17 @@
 import React from "react";
-import Product from "./Product";
+import ProductDetails from "./ProductDetails";
 import ProductList from "./ProductList";
 
 const Home = () => {
   return (
-    <div className="wrapper">
-        <h1>"Check Out These Awesome Products!"</h1>
-        <div>
-          <Product/>
-          {/* <ProductList/> */}
-        </div>
+    <div>
+      <h1>Premium Products on Sale!</h1>
+      <div>
+        <ProductList />
+        {/* <ProductDetails/> */}
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Home;

@@ -1,9 +1,6 @@
 const API_URL = `https://fakestoreapi.com/products`;
 
-// export const fetchProductById = async (id="1") => await fetch(`${API_URL}/${id}`)
-//     .then(res => res.json())
-//     .then(res => res)
-//     .catch(err => err);
+
 
 export const fetchProductById = async (id="1") => await fetch(`${API_URL}/${id}`)
     .then(res => res.json())
