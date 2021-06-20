@@ -26,6 +26,7 @@ const NavItem = styled.a`
   text-decoration: inherit;
   text-transform: uppercase;
   outline: none;
+  font-family: system-ui;
 `;
 
 export default Navbar;

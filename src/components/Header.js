@@ -7,7 +7,7 @@ function Header () {
     <HMain>
       <HTop>
         <HTopLogo>
-          <HLogo a href="/">J's Awesome Store!</HLogo>
+          <HLogo a href="/">JK'S AWESOME STORE</HLogo>
         </HTopLogo>
         <HTopNavbar>
           <HTopNavigation>
@@ -43,7 +43,7 @@ const HTopLogo = styled.section`
 const HLogo = styled.a`
     color: inherit;
     text-decoration: inherit;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:system-ui;
     font-size: 80px;
 `
 

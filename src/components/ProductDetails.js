@@ -6,7 +6,7 @@ const ProductDetails = (props) => {
 
 
   useEffect(() => {
-    fetchProductById(2) // think of a way to input id of button that was clicked
+    fetchProductById(2) // need to change hardcoded id
       .then((res) =>
         setProduct({
             id: res.id,
