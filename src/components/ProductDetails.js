@@ -1,12 +1,15 @@
 import React, { Component, useState, useEffect } from "react";
 import { fetchProductById, fetchProducts } from "../api";
+import { useParams } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 const ProductDetails = (props) => {
+  const { id } = useParams();
   const [product, setProduct] = useState({});
 
 
   useEffect(() => {
-    fetchProductById(2) // need to change hardcoded id
+    fetchProductById(id) 
       .then((res) =>
         setProduct({
             id: res.id,
@@ -27,7 +30,9 @@ const ProductDetails = (props) => {
         <p>{product.title}</p>
         <p>{product.price}</p>
         <p>{product.description}</p>
-        <button>View Details</button> 
+        <Link to={`/products`}>
+            Back
+        </Link>
       </div>
     </div>
   );

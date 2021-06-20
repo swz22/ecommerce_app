@@ -44,7 +44,7 @@ const HLogo = styled.a`
     color: inherit;
     text-decoration: inherit;
     font-family:system-ui;
-    font-size: 80px;
+    font-size: 70px;
 `
 
 const HTopNavbar = styled.section`

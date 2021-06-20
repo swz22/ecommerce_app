@@ -15,11 +15,12 @@ const App = () => {
         <Wrapper>
         <Header />
         <News>
-          <h1>FOURTH OF JULY SALE!</h1>
+          <h1 style={{fontSize:25}}>4TH OF JULY SALE!</h1>
           <h3>FREE SHIPPING ON PURCHASES OVER $50!</h3>
           </News>
             <Route exact path="/" component={ProductList} />
-            {/* <Route path="/:id" component={ProductDetails} /> */}
+            <Route exact path="/products" component={ProductList} />
+            <Route path="/products/:id" component={ProductDetails} />
             <Route path="/cart" component={Cart} />
             <Route path="/checkout" component={Checkout} />
         </Wrapper>

@@ -5,7 +5,6 @@ function Navbar() {
   return (
     <Nav>
       <NavItem href="/" className="navbar-item"> Home </NavItem>
-      <NavItem href="/products/:id" className="navbar-item"> Details </NavItem>
       <NavItem href="/cart" className="navbar-item"> Cart </NavItem>
       <NavItem href="/checkout" className="navbar-item"> Checkout </NavItem>
     </Nav>
