@@ -6,7 +6,7 @@ const ProductDetails = (props) => {
 
 
   useEffect(() => {
-    fetchProductById(props.productId)
+    fetchProductById(2) // think of a way to input id of button that was clicked
       .then((res) =>
         setProduct({
             id: res.id,
@@ -22,12 +22,12 @@ const ProductDetails = (props) => {
 
   return (
     <div>
-      <img src={product.image} style={{ height: 400, width: 400 }} />
+      <img src={product.image} style={{ height: 200, width: 200 }} />
       <div>
         <p>{product.title}</p>
         <p>{product.price}</p>
         <p>{product.description}</p>
-        <button>View Product</button> 
+        <button>View Details</button> 
       </div>
     </div>
   );
