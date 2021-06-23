@@ -41,7 +41,7 @@ const HTopLogo = styled.section`
 `;
 
 const HLogo = styled.a`
-    color: inherit;
+    color: black;
     text-decoration: inherit;
     font-family:system-ui;
     font-size: 70px;
