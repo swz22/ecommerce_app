@@ -40,9 +40,9 @@ const ProductDetails = () => {
   return (
     <div>
       <Container>
-        <img src={product.image} alt="pic" style={{ height: 200, width: 200 }}/>
+        <img src={product.image} alt="pic" style={{ height: 220, width: 200, marginBottom:'30px' }}/>
         <p>{product.title}</p>
-        <p style={{ width: "40%" }}>{product.description}</p>
+        <p style={{ width: "35%" }}>{product.description}</p>
         <p style={{ fontSize: "24px" }}>{`$${product.price}`}</p>
         <ButtonContainer>
           <label htmlFor="quantity">Quantity:</label>
@@ -61,7 +61,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 110px;
 `;
 
 const ButtonContainer = styled.div`

@@ -12,13 +12,21 @@ const Checkout = () => {
     localStorage.setItem("cart", JSON.stringify([]));
   };
 
+  function numberWithCommas(x) {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1,$2");
+    return x;
+}
+
   return (
     <div>
       <Heading> C H E C K O U T </Heading>
       <Cart />
       <Summary>
         <span> Items in Cart: {cart.length} </span>
-        <span> Total Price: {`$${totalPrice}`} </span>
+        <span> Total Price: {`$${numberWithCommas(totalPrice.toFixed(2))}`} </span>
       </Summary>
 
       <form> 
@@ -55,7 +63,7 @@ const CoolButton = styled.button`
   border-radius: 0.4em;
   color: white;
   background-color: #32A23A;
-  margin-top: 14px;
+  margin-top: 15px;
   margin-bottom: 4px;
   font-size: 18px;
   width: 40%;

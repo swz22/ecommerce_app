@@ -21,10 +21,10 @@ const ProductList = (props) => {
     return (
       <div>
         <Link to={`/products/${product.id}`}>
-          <img src={product.image} alt="Pic" style={{ height: 200, width: 180, display:"block", margin:"auto" }} />
+          <img src={product.image} alt="Pic" style={{ height: 180, width: 160, display:"block", margin:"auto" }} />
         </Link>
         <div style={{ textAlign:"center"}}>
-          <p>{product.title}</p>
+          <p style={{height: '35px'}}>{product.title}</p>
           <p style={{ fontSize:"1.5em"}}>{`$${product.price}`}</p>
         </div>
       </div>

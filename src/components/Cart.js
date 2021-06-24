@@ -24,10 +24,10 @@ const Cart = () => {
       <div>
         <img src={product.image} alt="Pic" style={{ height: 90, width: 90, display: "block", margin: "auto" }} />
         <div style={{ textAlign: "center" }}>
-          <p>{product.name}</p>
-          <span style={{ fontSize: "1.5em" }}> {`$${product.price}`} </span>
+          <p style={{height: '60px'}}>{product.name.substring(0,67)}</p>
+          <p style={{ fontSize: "1.5em" }}> {`$${product.price}`} </p>
           <CoolButton onClick={() => removeFromCart(index)}>
-            Remove From Cart
+            Remove Item
           </CoolButton>
         </div>
       </div>
@@ -72,7 +72,6 @@ const CoolButton = styled.button`
   border-radius: 0.4em;
   color: white;
   background-color: #3369ff;
-  margin-top: 10px;
   margin-bottom: 4px;
   font-size: 15px;
   cursor: pointer;
@@ -85,8 +84,8 @@ const CoolButton2 = styled.button`
   padding: 0.3em 0.5em;
   border-radius: 0.4em;
   color: white;
-  background-color: #3369ff;
-  margin-top: 5px;
+  background-color: black;
+  margin-top: 25px;
   margin-bottom: 4px;
   font-size: 20px;
   cursor: pointer;
