@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { fetchProducts } from "../api";
 import ProductDetails from "./ProductDetails";
-import MiniCart from "./MiniCart";
 import styled from "styled-components";
 
 const ProductList = (props) => {
   const [productId, setProductId] = useState("");
   const [productList, setProduct] = useState([]);
+  //in case api goes down, place a few product data objects inside array above. see comment in api.js
 
- 
   useEffect(() => {
     fetchProducts()
       .then((res) => {
@@ -34,26 +33,22 @@ const ProductList = (props) => {
 
   return (
   <div>
-    <MiniCart/>
-  
     <Container>
-      {productId === "" ?  productList.map((product) => {
-        return buildProduct(product);
-      }) : <ProductDetails setProductId={setProductId} productId = {productId} />
-    }
+      {/*BELOW: if productId is not set, render productList. if productId IS set, render ProductDetails component instead */}
+      {productId === "" ?  productList.map((product) => { return buildProduct(product) }) : 
+      <ProductDetails setProductId={setProductId} productId = {productId}/>}
     </Container>
     </div>
 
   );
 };
 
-
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 40px;
   margin-right: 40px;
-  margin-top: 20px;
+  margin-top: 40px;
 `;
 
 export default ProductList;
