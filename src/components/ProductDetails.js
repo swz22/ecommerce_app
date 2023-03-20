@@ -15,7 +15,7 @@ const ProductDetails = () => {
       id: product.id,
       name: product.title,
       price: product.price,
-      image: product.image,
+      images: product.images,
     };
     let updatedCart = [...cart, item];
     localStorage.setItem("cart", JSON.stringify(updatedCart));
@@ -31,7 +31,7 @@ const ProductDetails = () => {
           price: res.price,
           description: res.description,
           category: res.category,
-          image: res.image,
+          images: res.images,
         })
       )
       .catch((err) => console.error("An error occured: " + err));
@@ -40,7 +40,7 @@ const ProductDetails = () => {
   return (
     <div>
       <Container>
-        <img src={product.image} alt="pic" style={{ height: 220, width: 200, marginBottom:'30px' }}/>
+        <img src={product.images} alt="pic" style={{ height: 220, width: 200, marginBottom:'30px' }}/>
         <p>{product.title}</p>
         <p style={{ width: "35%" }}>{product.description}</p>
         <p style={{ fontSize: "24px" }}>{`$${product.price}`}</p>

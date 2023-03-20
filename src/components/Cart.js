@@ -22,7 +22,7 @@ const Cart = () => {
   const buildProduct = (product, index) => {
     return (
       <div>
-        <img src={product.image} alt="Pic" style={{ height: 90, width: 90, display: "block", margin: "auto" }} />
+        <img src={product.images} alt="Pic" style={{ height: 90, width: 90, display: "block", margin: "auto" }} />
         <div style={{ textAlign: "center" }}>
           <p style={{height: '60px'}}>{product.name.substring(0,67)}</p>
           <p style={{ fontSize: "1.5em" }}> {`$${product.price}`} </p>

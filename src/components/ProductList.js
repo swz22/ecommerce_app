@@ -21,7 +21,7 @@ const ProductList = (props) => {
     return (
       <div>
         <Link to={`/products/${product.id}`}>
-          <img src={product.image} alt="Pic" style={{ height: 180, width: 160, display:"block", margin:"auto" }} />
+          <img src={product.images} alt="Pic" style={{ height: 180, width: 160, display:"block", margin:"auto" }} />
         </Link>
         <div style={{ textAlign:"center"}}>
           <p style={{height: '35px'}}>{product.title}</p>
@@ -34,7 +34,6 @@ const ProductList = (props) => {
   return (
   <div>
     <Container>
-      {/*BELOW: if productId is not set, render productList. if productId IS set, render ProductDetails component instead */}
       {productId === "" ?  productList.map((product) => { return buildProduct(product) }) : 
       <ProductDetails setProductId={setProductId} productId = {productId}/>}
     </Container>
